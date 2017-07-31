@@ -1,0 +1,29 @@
+{
+  "posts": [
+    { "id": 3, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" },
+  "getMenuTree": [
+    { "id": 1, "label": "仪表盘", "attrs": {"href": "dashboard", "icon": "dashboard"} },
+    { "id": 2, "label": "系统配置", "attrs": {"icon": "cog"}, "children": [
+      { "id": 21, "label": "字典配置", "parent": "2", "attrs": {"href": "config/dict"} },
+      { "id": 22, "label": "参数配置", "parent": "2", "attrs": {"href": "config/option"} }
+    ]
+    },
+    { "id": 3, "label": "用户权限管理", "attrs": {"icon": "users"}, "children": [
+      { "id": 31, "label": "用户管理", "parent": "3", "attrs": {"href": "security/user"} },
+      { "id": 32, "label": "角色管理", "parent": "3", "attrs": {"href": "security/role"} },
+      { "id": 33, "label": "菜单管理", "parent": "3", "attrs": {"href": "security/menu"} },
+      { "id": 34, "label": "模块管理", "parent": "3", "attrs": {"href": "security/model"} },
+      { "id": 36, "label": "权限管理", "parent": "3", "attrs": {"href": "security/permission"} },
+      { "id": 37, "label": "测试三级菜单", "children": [
+        { "id": 371, "label": "test1", "parent": "37", "attrs": {"href": "config/dict1"} },
+        { "id": 372, "label": "test2", "parent": "37", "attrs": {"href": "config/option1"} }
+      ] }
+    ]
+    }
+  ]
+}
